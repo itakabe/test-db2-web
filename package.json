@@ -1,0 +1,18 @@
+{
+  "name": "test-db2-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "itakabe",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "ibm_db": "^3.0.0"
+  }
+}
