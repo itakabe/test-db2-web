@@ -1,46 +1,61 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<!-- Googleの検索インデックスから除外する  -->
-		<meta name="robots" content="noindex">
-		<!-- キャッシュを無効にする -->
-		<meta http-equiv="Pragma" content="no-cache">
-		<meta http-equiv="Cache-Control" content="no-cache">
-		<meta http-equiv="Expires" content="0">
-		<title><%- title %></title>
-		<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css"></link>
-	</head>
-	<style>
-    	body {
-			margin: 0;
-		font-family: muli,sans-serif;
-		}
-		.MasterHeaderCellBeforeLogin {
-			background-color: #004080;
-			box-shadow: 5px 0 10px rgb(0 0 0 / 50%);
-			padding-bottom: 12px;
-			padding-left: 30px;
-			padding-right: 30px;
-			padding-top: 12px;
-			z-index: 1011;
-		}
-		p.SystemName {
-			display: block;
-			white-space: normal;
-			font-size: 30px;
-			font-weight: 400;
-			color: #fff;
-			text-align: left;
-		}
-	</style>
-	<body>
-		<div class="container">
-		<p class="MasterHeaderCellBeforeLogin SystemName">
-			DB2接続確認サイト
-		</p>
-		<%- include("item.ejs", items) %>
-		</div>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- Googleの検索インデックスから除外する  -->
+	<meta name="robots" content="noindex">
+	<!-- キャッシュを無効にする -->
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>
+		<%- title %>
+	</title>
+	<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+	</link>
+</head>
+<style>
+	body {
+
+		font-family: muli, sans-serif;
+	}
+
+	.MasterHeaderCellBeforeLogin {
+		background-color: #004080;
+		box-shadow: 5px 0 10px rgb(0 0 0 / 50%);
+		padding-bottom: 12px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 12px;
+		z-index: 1011;
+	}
+
+	p.SystemName {
+		display: block;
+		white-space: normal;
+		font-size: 30px;
+		font-weight: 400;
+		color: #fff;
+		text-align: left;
+	}
+</style>
+
+<body>
+	<div class="col-lg-8 mx-auto p-3 py-md-5">
+		<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+			<a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+				<span class="fs-4">DB2接続確認サイト</span>
+			</a>
+		</header>
+		<main>
+			<h2><%- title %></h2>
+			<p><%- text %></p>
+			<%- include("item.ejs", items) %>
+		</main>
+	</div>
+
+</body>
+
 </html>
