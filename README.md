@@ -31,7 +31,7 @@ Dockerでテスト用DB2インスタンスを立てて接続テストが可能�
 sudo docker run -itd --name db2 \
   --privileged=true \
   -e DB2INST1_PASSWORD=password \
-  -e DBNAME=testdb
+  -e DBNAME=testdb \
   -e LICENSE=accept \
   -v /home/issei/db2fs:/database \
   -p 50000:50000 \
